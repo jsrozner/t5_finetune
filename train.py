@@ -158,10 +158,10 @@ class T5DataSet(Dataset):
                 # Note: padding could also be done via collate in dataloader
                 # todo: we could actually batch encode these (i.e. multiple per)
                 tokenized_inputs = self.tokenizer(
-                    [src], max_length=self.max_src_len, padding="max_length", return_tensors="pt",
+                    [src], max_length=self.max_src_len, padding="max_length", return_tensors="pt", truncation=True
                 )
                 tokenized_targets = self.tokenizer(
-                    [tgt], max_length=self.max_tgt_len, padding="max_length", return_tensors="pt",
+                    [tgt], max_length=self.max_tgt_len, padding="max_length", return_tensors="pt", truncation=True
                 )
                 inputs_out.append(tokenized_inputs)
                 targets_out.append(tokenized_targets)

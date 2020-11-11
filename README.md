@@ -29,4 +29,5 @@ tensorboard --logdir=<your save dir>
   
   
 # Notes
-- Test is not implemented, so if you want to test on a holout dataset, you'll want to tweak the code to generate a dataset on test.source and test.target and evaluate the metrics you want.
+- Test is not implemented, so if you want to test on a holdout dataset, you'll want to tweak the code to generate a dataset on test.source and test.target and evaluate the metrics you want.
+- If your task is similar to one of the originally trained tasks like summarization, you might benefit from prepending a task label to your inputs, like "summarize: " or "translate English to Russian: "
